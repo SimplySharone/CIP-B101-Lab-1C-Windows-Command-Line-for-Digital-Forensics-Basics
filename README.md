@@ -94,6 +94,8 @@ When a command is run without a full path, Windows searches directories listed i
 ## Conclusion
 Through this laboratory exercise, foundational Windows command-line skills essential for digital forensic triage were practiced within a controlled Windows 11 VirtualBox environment. By navigating directory structures, safely managing files, extracting system, network, and process metadata, inspecting file permissions, and building an automated batch script (`sys_info.bat`), this lab demonstrated how disciplined command-line workflows produce reliable, repeatable, and well-documented forensic evidence.
 
+<img width="856" height="437" alt="image" src="https://github.com/user-attachments/assets/2f9d6df2-2b3d-4799-aabf-df91b41b3ea3" />
+
 > *Figure 1: Verification of the isolated laboratory directory structure under `C:\Users\Public` using `mkdir` and `dir`.*
 
 ---
