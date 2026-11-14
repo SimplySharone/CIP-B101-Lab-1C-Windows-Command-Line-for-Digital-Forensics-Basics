@@ -55,7 +55,45 @@ To maintain forensic integrity and repeatability, the examination followed a str
 ### 4.1 Preparation: Laboratory Workspace Setup
 A dedicated root folder (`CIP-B101_Lab1C_[FIRSTNAME_LASTNAME]`) and eight subfolders (`evidence`, `screenshots`, `outputs`, `scripts`, `workspace`, `workspace2`, `workspace3`, `workspace4`) were created under `C:\Users\Public` to organize all forensic artifacts cleanly.
 
-![Figure 1: Laboratory Workspace Creation](screenshots/01_workspace_setup.png)
+## Mini Forensic Interpretation Questions (Task 12)
+
+### 1. What is the difference between an absolute path and a relative path? Give one example of each from your lab.
+An **absolute path** specifies the complete location of a file or folder starting from the root drive letter (`C:\`), regardless of the user's current working directory. A **relative path** specifies a file or folder location in relation to the current working directory without listing the full route from the drive root.
+
+* **Absolute path example:** `C:\Users\Public\CIP-B101_Lab1C_[FIRSTNAME_LASTNAME]\outputs`
+* **Relative path example:** `..\workspace2\evidence_note_copy.txt`
+
+---
+
+### 2. Why should analysts create a separate lab/evidence folder before running commands?
+Creating an isolated workspace prevents accidental overwriting, corruption, or deletion of native operating system files. It also keeps all collected artifacts organized in one verifiable location and maintains proper evidence-handling hygiene without cross-contamination.
+
+---
+
+### 3. Which command showed your IP address and which command showed your MAC address?
+* **IP Address:** `ipconfig` (as well as `ipconfig /all`) displayed the system's IPv4 address.
+* **MAC Address:** `wmic nic get macaddress,description` (as well as `ipconfig /all`) displayed the physical MAC address of the network adapter.
+
+---
+
+### 4. Why is a batch file useful in forensic triage?
+A batch file automates a predefined sequence of commands so analysts can collect volatile and non-volatile system data rapidly, consistently, and repeatably across multiple systems while minimizing manual typing errors.
+
+---
+
+### 5. Why must analysts document failed commands or failed pings instead of hiding them?
+Accurate forensic documentation requires recording the exact state of the system as observed. A failed ping or command provides critical investigative context—such as proving that a host was network-isolated, blocked by a firewall, or offline—and preserves the integrity and credibility of the analyst's report.
+
+---
+
+### 6. What risk can occur if a suspicious executable is placed in a directory listed in `PATH`?
+When a command is run without a full path, Windows searches directories listed in `PATH` sequentially. If a malicious executable shares the name of a legitimate utility and sits in a `PATH` directory searched before `System32`, Windows may execute the attacker's binary instead of the trusted system tool (**PATH hijacking / binary planting**), leading to unauthorized code execution or privilege escalation.
+
+---
+
+## Conclusion
+Through this laboratory exercise, foundational Windows command-line skills essential for digital forensic triage were practiced within a controlled Windows 11 VirtualBox environment. By navigating directory structures, safely managing files, extracting system, network, and process metadata, inspecting file permissions, and building an automated batch script (`sys_info.bat`), this lab demonstrated how disciplined command-line workflows produce reliable, repeatable, and well-documented forensic evidence.
+
 > *Figure 1: Verification of the isolated laboratory directory structure under `C:\Users\Public` using `mkdir` and `dir`.*
 
 ---
