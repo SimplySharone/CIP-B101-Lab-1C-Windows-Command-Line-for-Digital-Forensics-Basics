@@ -106,7 +106,10 @@ Directory traversal was tested using root (`cd \`), absolute (`cd \Users`), and 
 * **Absolute Path Definition:** An absolute path specifies the complete location of a file or folder starting from the root drive letter (for example, `C:\Users\Public\CIP-B101_Lab1C_[FIRSTNAME_LASTNAME]`).
 * **Relative Path Definition:** A relative path specifies a file or folder location in relation to the user's current working directory without listing the full path from the drive root (for example, `cd ..` or `Public\CIP-B101_Lab1C_[FIRSTNAME_LASTNAME]`).
 
-![Figure 2: Windows Path Navigation and Tree Output](screenshots/02_path_navigation.png)
+<img width="657" height="657" alt="image" src="https://github.com/user-attachments/assets/8a63cbea-1614-42cf-a4c3-be8d3796e803" />
+                                                                                                                                                                                                              <img width="857" height="653" alt="image" src="https://github.com/user-attachments/assets/6e346161-0558-4dd6-8308-cf1389681997" />
+
+
 > *Figure 2: Command Prompt output demonstrating current directory inspection (`cd`), directory listing (`dir`), and folder tree mapping (`tree`).*
 
 ---
